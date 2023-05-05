@@ -34,11 +34,11 @@ class VeiculoSerializer(ModelSerializer):
 
 class VeiculoDetSerializer(ModelSerializer):
     model = Veiculo
-    fields ="__all__"
+    fields = "__all__"
     depth = 1
 
 class VeiculoListSerializer(ModelSerializer):
     model = Veiculo
-    fields = [ "ano", "preco"]
+    fields = ["modelo", "ano", "preco"]
 
 
