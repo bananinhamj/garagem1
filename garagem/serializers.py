@@ -15,21 +15,21 @@ class CategoriaSerializer(ModelSerializer):
 class CorSerializer(ModelSerializer):
     class Meta:
         model = Cor
-        Fields = "__all__"
+        fields = "__all__"
 
 class AcessorioSerializer(ModelSerializer):
     class Meta:
         model = Acessorio
-        Fields = "__all__"
+        fields = "__all__"
 
 class ModeloSerializer(ModelSerializer):
     class Meta:
         model = Modelo
-        Fields = "__all__"
+        fields = "__all__"
 
 class VeiculoSerializer(ModelSerializer):
     class Meta:
         model = Veiculo
-        Fields = "__all__"
+        fields = "__all__"
 
 

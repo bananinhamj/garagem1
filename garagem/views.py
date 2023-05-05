@@ -24,5 +24,5 @@ class ModeloViewSet(ModelViewSet):
     serializer_class = ModeloSerializer
 
 class VeiculoViewSet(ModelViewSet):
-    queryset = Modelo.objects.all()
+    queryset = Veiculo.objects.all()
     serializer_class = VeiculoSerializer
