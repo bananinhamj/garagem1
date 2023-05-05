@@ -23,7 +23,7 @@ class AcessorioSerializer(ModelSerializer):
         fields = "__all__"
 
 class ModeloSerializer(ModelSerializer):
-    class Meta:
+    class Meta: 
         model = Modelo
         fields = "__all__"
 
@@ -31,5 +31,14 @@ class VeiculoSerializer(ModelSerializer):
     class Meta:
         model = Veiculo
         fields = "__all__"
+
+class VeiculoDetSerializer(ModelSerializer):
+    model = Veiculo
+    fields ="__all__"
+    depth = 1
+
+class VeiculoListSerializer(ModelSerializer):
+    model = Veiculo
+    fields = [ "ano", "preco"]
 
 
