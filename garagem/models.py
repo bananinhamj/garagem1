@@ -42,3 +42,9 @@ class Veiculo(models.Model):
         return f"{self.marca} {self.categoria} {self.ano} {self.cor}"
     class Meta:
         verbose_name_plural = 'Veículos'
+
+class Modelo(models.Model):
+    descricao = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.descricao

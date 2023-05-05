@@ -1,6 +1,6 @@
 from rest_framework.serializers import ModelSerializer
 
-from garagem.models import Acessorio, Categoria, Cor, Marca
+from garagem.models import Acessorio, Categoria, Cor, Marca, Modelo
 
 class MarcaSerializer(ModelSerializer):
     class Meta:
@@ -21,4 +21,10 @@ class AcessorioSerializer(ModelSerializer):
     class Meta:
         model = Acessorio
         Fields = "__all__"
+
+class ModeloSerializer(ModelSerializer):
+    class Meta:
+        model = Modelo
+        Fields = "__all__"
+
 
