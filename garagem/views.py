@@ -25,7 +25,10 @@ class ModeloViewSet(ModelViewSet):
 
 class VeiculoViewSet(ModelViewSet):
     queryset = Veiculo.objects.all()
-    serializer_class = {"List": VeiculoListSerializer, 
-                        "retrieve": VeiculoDetSerializer}
+
     def get_serializer_class(self):
-        return self.serializer_class.get(self.action, VeiculoSerializer)
+        if self.action == "list":
+            return VeiculoListSerializer
+        elif self.action == "retrieve":
+            return VeiculoDetSerializer
+        return VeiculoSerializer
